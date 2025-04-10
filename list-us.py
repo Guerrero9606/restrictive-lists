@@ -241,7 +241,7 @@ def parse_html(html_content):
                     'other_details': f"Designated: {designation_date_str}", # Store original date string here
                     'designation_date': designation_date, # Store parsed date separately if needed
                     'raw_data': f"Date: {designation_date_str}, Details: {name_cell_content}",
-                    'last_update_date': current_time
+                    'load_timestamp': current_time
                 }
                 entries.append(entry)
             else:

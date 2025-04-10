@@ -324,7 +324,7 @@ def load_to_postgres(df, table_name, db_conn):
         # Asegurar que el orden de las columnas en la tupla coincida con INSERT
         cols = ['source_list', 'entry_type', 'name', 'aliases', 'nationality',
                 'date_of_birth', 'place_of_birth', 'identification_details',
-                'other_details', 'raw_data', 'last_update_date']
+                'other_details', 'raw_data', 'load_timestamp']
         # Reemplazar NaN/NaT de Pandas por None de Python para compatibilidad con psycopg2
         data_tuples = [tuple(row) for row in df[cols].where(pd.notnull(df), None).values]
 
